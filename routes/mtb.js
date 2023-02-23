@@ -25,7 +25,6 @@ router.get('/getOne/:id', (req, res, next) => {
     if (err) return next(err);
       res.json(mtb);
   });
-  
 });
 
 //POST
