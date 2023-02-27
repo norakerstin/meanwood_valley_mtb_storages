@@ -9,7 +9,8 @@ var MtbSchema = new mongoose.Schema({
     model: String,
     colour: String,
     fork: String,
-    shock: String
+    shock: String,
+    img: Binary
 },
 //namnet på collection i db:
 {
