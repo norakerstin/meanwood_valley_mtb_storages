@@ -28,8 +28,8 @@ router.get('/getOne/:id', (req, res, next) => {
 });
 
 //POST
-router.post('/', function(req, res, next) {
-    //req.body är innehållet i requestobjektet, dvs en json med en bil
+router.post('/CREATE', function(req, res, next) {
+    //req.body är innehållet i requestobjektet, dvs en json med en mtb
     mtbmodule.create(req.body, function (err, post) {
       if (err) return next(err);
       res.json(post); //Här skickar vi tillbaka datan vi skickar in i databasen, om skrivningen gick bra
@@ -45,7 +45,7 @@ router.post('/', function(req, res, next) {
     });
 
 //UPDATE:
-router.post('/:id', function(req, res, next) {
+router.post('/UPDATE/:id', function(req, res, next) {
   mtbmodule.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
