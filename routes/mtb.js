@@ -35,7 +35,7 @@ router.post('/CREATE', function(req, res, next) {
       res.json(post); //Här skickar vi tillbaka datan vi skickar in i databasen, om skrivningen gick bra
     });
   });
-
+  
   //DELETE
   router.delete('/DELETE/:id', function(req, res, next) {
     mtbmodule.findByIdAndDelete(req.params.id, req.body, function (err, post) {
